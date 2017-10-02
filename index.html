@@ -6,17 +6,30 @@
     <title>はじめてのjQuery</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
-      $(function(){
-         $("#toggle").on("click",function(){
-         $("#target").fadeToggle("slow");
-         });
-      });
       
+      $(document).ready(function(){
+         $("#toggle").on("click",function(){
+         $("#Test").animate({
+           width:"90%",
+           opacity: 0.4,
+           marginRight:"0.8in",
+           fontsize:"4em",
+           borderWidth:"13px"
+         },1600);
+      });
+      });   
       </script>
+    <style>
+      div{
+         background-color:#bca;
+        width:140px;
+        border:1px solid red;
+      }
+      </style>
     </head>
   <body>
-    <div id="target">表示される</div>
-    <button id="toggle">切り替え</button>
+    <div id="target">押してね</div>
+    <div id="Test"></div>
     </body>
   </html>
   
